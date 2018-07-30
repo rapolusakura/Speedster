@@ -37,6 +37,7 @@
                     <navigationItem key="navigationItem" id="X1l-6g-I9c"/>
                     <connections>
                         <outlet property="mapView" destination="lgr-VU-rH7" id="Ojc-cT-sne"/>
+                        <segue destination="uhW-jx-cpJ" kind="show" identifier="startTrip" id="e0B-9k-eMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,6 +87,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpo-oZ-J0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853" y="143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pHl-Nh-B2N">
+            <objects>
+                <viewController id="uhW-jx-cpJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0xN-Et-eEU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.58471943520000003" green="1" blue="0.72584326720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="7ez-ay-ymm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efi-Nu-Nne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Ct-KD-gmp">

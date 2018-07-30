@@ -18,6 +18,7 @@ protocol HandleMapSearch {
 
 class ViewController : UIViewController {
     let locationManager = CLLocationManager()
+    var trip: Trip? = nil
     
     @IBOutlet weak var mapView: MKMapView!
     var resultSearchController: UISearchController? = nil
@@ -113,6 +114,7 @@ extension ViewController : MKMapViewDelegate {
         {
             print("User tapped on annotation with title: \(annotationTitle!)")
             selectDestination()
+            self.performSegue(withIdentifier: "startTrip", sender: self)
         }
     }
     
@@ -123,15 +125,8 @@ extension ViewController : MKMapViewDelegate {
             //            let originLong = locationManager.location?.coordinate.longitude
             let destLat = mapItem.placemark.coordinate.latitude
             let destLong = mapItem.placemark.coordinate.longitude
-            let test = Trip(oLat: 37.7771755, oLong: -122.4271653, dLat: destLat, dLong: destLong)
+            trip = Trip(oLat: 37.7771755, oLong: -122.4271653, dLat: destLat, dLong: destLong)
         }
-    }
-    
-    func startTrip() {
-        if let selectedPin = selectedPin {
-            let mapItem = MKMapItem(placemark: selectedPin)
-            let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
-            mapItem.openInMaps(launchOptions: launchOptions)
-        }
+        
     }
 }
