@@ -125,7 +125,10 @@ extension ViewController : MKMapViewDelegate {
             //            let originLong = locationManager.location?.coordinate.longitude
             let destLat = mapItem.placemark.coordinate.latitude
             let destLong = mapItem.placemark.coordinate.longitude
-            trip = Trip(oLat: 37.7771755, oLong: -122.4271653, dLat: destLat, dLong: destLong)
+            //trip = Trip(oLat: 37.7771755, oLong: -122.4271653, dLat: destLat, dLong: destLong)
+//            DirectionsService.getDirections(originLat: 37.7771755, originLong: -122.4271653, destLat: destLat, destLong: destLong)
+            //PlaceIDService.getPlaceID(lat: 37.7771755, long: -122.4271653)
+            
         }
         
     }

@@ -32,15 +32,4 @@ class Trip {
         getPath(originLat: oLat, originLong: oLong, destLat: dLat, destLong: dLong)
     }
     
-    func getCurrSpeedLimit(placeID: String) -> Double {
-        //needs to reference getPath output (store as a constant?)
-        // or you can initilize a Trip object once you have the origin and destination and then refer to the instance variable
-        
-        return 1
-    }
-    
-    func getCurrPlaceID(lat: Double, long: Double) -> String {
-        return ""
-    }
-    
 }

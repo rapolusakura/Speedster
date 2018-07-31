@@ -10,6 +10,10 @@
 		2FC0DA948E455D0624FE5722 /* Pods_Speedster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E70B23F66E5EBC920CA61 /* Pods_Speedster.framework */; };
 		4471D3E7210F925E006D8C14 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3E6210F925E006D8C14 /* LocationSearchTable.swift */; };
 		4471D3E9210F927C006D8C14 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3E8210F927C006D8C14 /* Trip.swift */; };
+		4471D3ED210FC0F4006D8C14 /* DirectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3EC210FC0F4006D8C14 /* DirectionsService.swift */; };
+		4471D3EF210FC100006D8C14 /* SpeedLimitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3EE210FC100006D8C14 /* SpeedLimitService.swift */; };
+		4471D3F1210FC10D006D8C14 /* PlaceIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3F0210FC10D006D8C14 /* PlaceIDService.swift */; };
+		4471D3F3210FC17E006D8C14 /* DistanceMatrixService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4471D3F2210FC17E006D8C14 /* DistanceMatrixService.swift */; };
 		44BA3B1C210F9006000D189E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA3B1B210F9006000D189E /* AppDelegate.swift */; };
 		44BA3B1E210F9006000D189E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA3B1D210F9006000D189E /* ViewController.swift */; };
 		44BA3B21210F9006000D189E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BA3B1F210F9006000D189E /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		4471D3E6210F925E006D8C14 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		4471D3E8210F927C006D8C14 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		4471D3EC210FC0F4006D8C14 /* DirectionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsService.swift; sourceTree = "<group>"; };
+		4471D3EE210FC100006D8C14 /* SpeedLimitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLimitService.swift; sourceTree = "<group>"; };
+		4471D3F0210FC10D006D8C14 /* PlaceIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceIDService.swift; sourceTree = "<group>"; };
+		4471D3F2210FC17E006D8C14 /* DistanceMatrixService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixService.swift; sourceTree = "<group>"; };
 		44BA3B18210F9006000D189E /* Speedster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speedster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BA3B1B210F9006000D189E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44BA3B1D210F9006000D189E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +61,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4471D3EA210FC0D4006D8C14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4471D3E8210F927C006D8C14 /* Trip.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4471D3EB210FC0E4006D8C14 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4471D3EC210FC0F4006D8C14 /* DirectionsService.swift */,
+				4471D3EE210FC100006D8C14 /* SpeedLimitService.swift */,
+				4471D3F0210FC10D006D8C14 /* PlaceIDService.swift */,
+				4471D3F2210FC17E006D8C14 /* DistanceMatrixService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		44BA3B0F210F9006000D189E = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +101,8 @@
 		44BA3B1A210F9006000D189E /* Speedster */ = {
 			isa = PBXGroup;
 			children = (
+				4471D3EB210FC0E4006D8C14 /* Services */,
+				4471D3EA210FC0D4006D8C14 /* Models */,
 				44BA3B1B210F9006000D189E /* AppDelegate.swift */,
 				44BA3B1D210F9006000D189E /* ViewController.swift */,
 				44BA3B1F210F9006000D189E /* Main.storyboard */,
@@ -81,7 +110,6 @@
 				44BA3B24210F9008000D189E /* LaunchScreen.storyboard */,
 				44BA3B27210F9008000D189E /* Info.plist */,
 				4471D3E6210F925E006D8C14 /* LocationSearchTable.swift */,
-				4471D3E8210F927C006D8C14 /* Trip.swift */,
 			);
 			path = Speedster;
 			sourceTree = "<group>";
@@ -210,10 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4471D3F1210FC10D006D8C14 /* PlaceIDService.swift in Sources */,
 				4471D3E9210F927C006D8C14 /* Trip.swift in Sources */,
+				4471D3EF210FC100006D8C14 /* SpeedLimitService.swift in Sources */,
 				4471D3E7210F925E006D8C14 /* LocationSearchTable.swift in Sources */,
 				44BA3B1E210F9006000D189E /* ViewController.swift in Sources */,
 				44BA3B1C210F9006000D189E /* AppDelegate.swift in Sources */,
+				4471D3ED210FC0F4006D8C14 /* DirectionsService.swift in Sources */,
+				4471D3F3210FC17E006D8C14 /* DistanceMatrixService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
